@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ming Yeung" />
+	<title>Zoom Slider Demo</title>
+	<link rel="stylesheet" type="text/css" href="../dist/zoomslider.css" />
+	<script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+	<style>
+		/* Basic styling */
+		html, body {
+			margin: 0;
+			padding: 0;
+			background-color: #fff;
+			font-family: Georgia, serif;
+			line-height: 1.4;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: normal;
+			font-style: italic;
+		}
+		code {
+			display: block;
+			background-color: #eee;
+			padding: 2em;
+			overflow: scroll;
+			white-space: nowrap;
+		}
+		.body {
+			max-width: 800px;
+			padding: 40px;
+			margin: 0 auto;
+		}
+		.meta {
+			margin: 0 0 40px 0;
+			font-size: 0.8em;
+		}
+		.properties-table {
+			width: 100%;
+			padding: 0;
+			border-spacing: 0;
+			margin-top: 2em;
+			font-size: .85em;
+			background-color: #eee;
+		}
+		.properties-table th, .properties-table td {
+			text-align: left;
+			padding: 10px;
+		}
+		.properties-table th {
+			border-bottom: 1px solid #333;
+			line-height: 2;
+		}
+		/* End Basic styling */
+
+		
+		#demo-1 {
+			position: relative; /* can either be relative, absolute or fixed. If position is not set (i.e. static), it would be set to "relative" by script */
+			overflow: hidden; /* to bound the empty top space created by inner element's top margin */
+			width: 100%;
+			min-height: 400px;
+			background-color: #999;
+		}
+		.demo-inner-content {
+			position: relative;
+			z-index: 2;
+			margin: 180px auto;
+			padding: 40px;
+			max-width: 600px;
+			color: #fff;
+			text-align: center;
+			font-size: 1.5em;
+		}
+		.demo-inner-content h1 {
+			font-size: 2.5em;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="demo-1" data-zs-src='["photos/8266426033_c8c830e351_h.jpg", "photos/8266429353_d07ce461b6_h.jpg", "photos/8270243344_9162d815d3_h.jpg"]' data-zs-overlay="dots">
+		<div class="demo-inner-content">
+			<h1><span>jQuery</span> . <span>zoomSlider</span></h1>
+			<p>ZoomSlider creates slideshows with zoom effect using background-image and CSS3.</p>
+		</div>
+	</div>
+
+	<div class="body">
+		<p class="meta">jQuery.zoomSlider v0.2.2 / by Ming Yeung / <a href="http://mingthings.com/" target="_blank">http://www.mingthings.com</a></p>
+		<p>To initialise zoomslider, add the attribute <em>data-zs-src</em> to a DOM element and the slider would auto-initialize.</p>
+		<code>
+			&lt;div <strong>data-zs-src='["img1.jpg", "img2.jpg", "img3.jpg"]'</strong>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Sample inner content&lt;/p&gt;<br />&lt;/div&gt;
+		</code>
+		<br>
+		<p>All configurable properties:</p>
+		<table class="properties-table">
+			<thead>
+				<tr>
+					<th>Data attribute</th>
+					<th>Default value</th>
+					<th>Possible values</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>data-zs-src</td>
+				<td>null</td>
+				<td>[]</td>
+			</tr>
+			<tr>
+				<td>data-zs-speed</td>
+				<td>8000</td>
+				<td>Number (mini-second)</td>
+			</tr>
+			<tr>
+				<td>data-zs-switchSpeed</td>
+				<td>800</td>
+				<td>Number (mini-second)</td>
+			</tr>
+			<tr>
+				<td>data-zs-interval</td>
+				<td>4500</td>
+				<td>Number (mini-second)</td>
+			</tr>
+			<tr>
+				<td>data-zs-autoplay</td>
+				<td>true</td>
+				<td>true / false</td>
+			</tr>
+			<tr>
+				<td>data-zs-bullets</td>
+				<td>true</td>
+				<td>true / false</td>
+			</tr>
+			<tr>
+				<td>data-zs-overlay</td>
+				<td>'plain'</td>
+				<td>false, 'plain', 'dots'</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../dist/jquery.zoomslider.min.js"></script>
+</body>
+</html>
