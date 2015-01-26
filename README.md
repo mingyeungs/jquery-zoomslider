@@ -28,17 +28,17 @@ All configurable properties:
 	<tr>
 		<td>data-zs-speed</td>
 		<td>8000</td>
-		<td>Number (mini-second)</td>
+		<td>Number (milliseconds)</td>
 	</tr>
 	<tr>
 		<td>data-zs-switchSpeed</td>
 		<td>800</td>
-		<td>Number (mini-second)</td>
+		<td>Number (milliseconds)</td>
 	</tr>
 	<tr>
 		<td>data-zs-interval</td>
 		<td>4500</td>
-		<td>Number (mini-second)</td>
+		<td>Number (milliseconds)</td>
 	</tr>
 	<tr>
 		<td>data-zs-autoplay</td>
