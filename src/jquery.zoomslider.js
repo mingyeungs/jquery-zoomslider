@@ -1,5 +1,5 @@
 /*
- *  zoomSlider - v0.2.2
+ *  zoomSlider - v0.2.3
  *  CSS3 background zoom slideshow
  *  http://mingthings.com
  *
@@ -125,6 +125,8 @@
 				}
 			}
 
+			self._promoteChildren();
+
 			$slideshow.append( $slidesWrap ).prependTo( this.$el );
 			if ( this.settings.bullets == true ) {
 				$slideshow.append( $bulletsWrap );
@@ -168,6 +170,8 @@
 			$slide.css({ 'background-image': "url('" + this.settings.src[0] + "')" }).appendTo( $slidesWrap );
 			$slide.addClass('active').css('opacity', 1);
 
+			self._promoteChildren();
+
 			$slideshow.append( $slidesWrap ).prependTo( this.$el );
 			this.$el.addClass('zs-enabled');
 
@@ -183,6 +187,18 @@
 					$slide.css( { 'opacity': 1.0, 'transform': 'scale(1.0, 1.0)', 'z-index': 2 } );
 				}, 50);
 			}
+		},
+		_promoteChildren: function() {
+			// make sure every children have high enough z-index
+			this.$el.children().each(function(index){
+				$this = $(this);
+				if ($this.css('z-index') == 'auto') {
+					$this.css('z-index', 2);
+				}
+				if ($this.css('position') == 'static') {
+					$this.css('position', 'relative');
+				}
+			});
 		},
 		jump: function( pos ) {
 			if ( pos >= this.numSlides ) {

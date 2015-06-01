@@ -4,6 +4,11 @@
 
 ZoomSlider creates slideshows with zoom effect using background-image and CSS3.
 
+Dependencies: 
+	
+- jQuery: 1.10.2+
+- Modernizr: 2.6.2+ <small>(for css3 transform support detection. May impliment custom script to remove this depencency in future)</small>
+
 To initialise zoomslider, add the attribute **data-zs-src** to a DOM element and the slider would auto-initialize.
 
 	<div data-zs-src='["img1.jpg", "img2.jpg", "img3.jpg"]'>

@@ -63,8 +63,8 @@
 			background-color: #999;
 		}
 		.demo-inner-content {
-			position: relative;
-			z-index: 2;
+			position: relative; /* if position is not set, the script will set it to 'relative'. */
+			z-index: 2; /* if z-index is not set, the script will set it to '2'. */
 			margin: 180px auto;
 			padding: 40px;
 			max-width: 600px;
@@ -87,10 +87,28 @@
 	</div>
 
 	<div class="body">
-		<p class="meta">jQuery.zoomSlider v0.2.2 / by Ming Yeung / <a href="http://mingthings.com/" target="_blank">http://www.mingthings.com</a></p>
+		<p class="meta">jQuery.zoomSlider v0.2.3 / by Ming Yeung / <a href="http://mingthings.com/" target="_blank">http://www.mingthings.com</a></p>
+		<h3>Dependencies:</h3>
+		<ul>
+			<li>jQuery: 1.10.2+</li>
+			<li>Modernizr: 2.6.2+ <small>(for css3 transform support detection. May impliment custom script to remove this depencency in future)</small></li>
+		</ul>
 		<p>To initialise zoomslider, add the attribute <em>data-zs-src</em> to a DOM element and the slider would auto-initialize.</p>
 		<code>
-			&lt;div <strong>data-zs-src='["img1.jpg", "img2.jpg", "img3.jpg"]'</strong>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Sample inner content&lt;/p&gt;<br />&lt;/div&gt;
+			&lt;head&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="css/zoomslider.css" /&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="js/modernizr-2.6.2.min.js"&gt;&lt;/script&gt;<br />
+			&lt;/head&gt;<br />
+			&lt;body&gt;
+			<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;div <strong>data-zs-src='["img1.jpg", "img2.jpg", "img3.jpg"]'</strong>&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Sample inner content&lt;/p&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="js/jquery.min.js">&lt;/script&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;script type="text/javascript" src="js/jquery.zoomslider.min.js"&gt;&lt;/script&gt;<br />
+			&lt;/body&gt;
 		</code>
 		<br>
 		<p>All configurable properties:</p>
